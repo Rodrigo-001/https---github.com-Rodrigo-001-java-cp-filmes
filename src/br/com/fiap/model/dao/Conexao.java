@@ -1,12 +1,12 @@
+//Rodrigo Camargo 98373
 package br.com.fiap.model.dao;
 
 //Esta classe é responsável por abrir e fechar conexões com o banco de dados.
 
-import java.sql.*;		//importa todas as classes de java.sql
+import java.sql.*;		
 
-public class Conexao {
-	// método abrindo conexão
-	//obs: o static é útil para retornar objeto conexao sem criar instancia do mesmo
+public class Conexao {	
+	//Static permite retornar objeto conexao sem criar instancia do mesmo
 	public static Connection abrirConexao(){
 		Connection con = null;
 		try {			
@@ -14,15 +14,15 @@ public class Conexao {
 			
 			String url = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";	//passando nome do driver, host do BD, porta e nome do BD
 			
-			final String USER = "0000000";
-			final String PASS = "000000";
+			final String USER = "rm98373";
+			final String PASS = "120503";
 			
-			con = DriverManager.getConnection(url, USER, PASS);		//Método getConnection abre a conexão com o banco de dados, tendo como parâmetros url, user e pass
+			con = DriverManager.getConnection(url, USER, PASS);		//Abre a conexão com o banco de dados, tendo como parâmetros url, user e pass
 			System.out.println("Conexao aberta!");
 			//Se o driver JDBC não for encontrado, o método lança exceção:
 		}catch (ClassNotFoundException e) {	
 			System.out.println(e.getMessage());
-			//Se(conexão nao pode ser aberta, instrução/valor inválida etc) lança exceção:
+			//Se(conexão não puder ser aberta instrução/valor inválida etc) lança exceção:
 		}catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}catch (Exception e) {
@@ -36,7 +36,7 @@ public class Conexao {
 			con.close();
 			System.out.println("Conexao fechada!");
 
-		} catch (SQLException e) {			//cai nessa exceção se a conexão: estiver fechada, não existir, estiver incorreta.
+		} catch (SQLException e) {			
 			System.out.println(e.getMessage());
 		}catch (Exception e) {
 			System.out.println(e.getMessage());

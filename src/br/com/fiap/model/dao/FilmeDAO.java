@@ -1,3 +1,4 @@
+//Rodrigo Camargo 98373
 package br.com.fiap.model.dao;
 
 import java.sql.Connection;
@@ -11,14 +12,14 @@ import java.util.ArrayList;
 import br.com.fiap.model.bean.Filme;
 
 public class FilmeDAO {
-	private Connection con;	//instancia objeto de Connection
+	private Connection con;	
 	
 	//construtor - Parâmetro obriga passagem de uma conexão válida para usar os métodos
 	public FilmeDAO(Connection con) {
 		this.con = con;
 	}
 
-	//gets e sets - permitem alterar somente a conexão
+	//gets e sets - permitem alterar conexão
 	public Connection getCon() {
 		return con;
 	}

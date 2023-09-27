@@ -1,3 +1,4 @@
+//Rodrigo Camargo 98373
 package br.com.fiap.model.bean;
 
 /**
@@ -10,12 +11,12 @@ public class Filme {
 	private String genero;
 	private String produtora;
 	
-	/* construtor vazio - os valores poderão ser definidos posteriormente
+	/* construtor vazio 
 	 */
 	public Filme() {		
 	}
 		
-	//gets e sets - atributos poderão ser acessados / acessados
+	//gets e sets - atributos poderão ser acessados / alterados
 	public String getCodigo() {
 		return codigo;
 	}

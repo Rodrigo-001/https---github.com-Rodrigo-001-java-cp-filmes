@@ -1,3 +1,4 @@
+//Rodrigo Camargo 98373
 package br.com.fiap.controller;
 
 import java.sql.Connection;
@@ -8,6 +9,12 @@ import br.com.fiap.model.dao.Conexao;
 import br.com.fiap.model.dao.FilmeDAO;
 
 public class FilmeController {
+	/**Abre conexão, Passsa os atributos para filmeBean e chama método de filmeDao para inserir um filme e fecha conexão.
+	 * 
+	 * @param  String codigo, String titulo, String genero, String produtora
+	 * @return String resultado.
+	 * @author Rodrigo Camargo
+	 */
 	public String insereFilme(String codigo, String titulo, String genero, String produtora) 
 			throws ClassNotFoundException , SQLException  {		
 		String resultado;
@@ -24,6 +31,12 @@ public class FilmeController {
 		
 	}
 	
+	/**Abre conexão, Passsa os atributos para filmeBean e chama método de filmeDao para alterar um filme e fecha conexão.
+	 * 
+	 * @param  String codigo, String titulo, String genero, String produtora
+	 * @return String resultado.
+	 * @author Rodrigo Camargo
+	 */
 	public String alteraFilme(String codigo, String titulo, String genero, String produtora) 
 			throws ClassNotFoundException , SQLException {		
 		String resultado;
@@ -39,6 +52,12 @@ public class FilmeController {
 		return resultado;	
 	}
 	
+	/**Abre conexão, Passsa a chave primaria para filmeBean e chama método de filmeDao para excluir um filme e fecha conexão.
+	 * 
+	 * @param  String codigo
+	 * @return String resultado.
+	 * @author Rodrigo Camargo
+	 */
 	public String excluiFilme(String codigo) 
 			throws ClassNotFoundException , SQLException {		
 		String resultado;
@@ -51,6 +70,12 @@ public class FilmeController {
 		return resultado;	
 	}
 	
+	/**Abre conexão, chama método de filmeDao e guarda os valores da consulta em uma string  e fecha conexão.
+	 * 
+	 * @param  String codigo
+	 * @return String resultado.
+	 * @author Rodrigo Camargo
+	 */
 	public String listaTodosFilmes() 
 			throws ClassNotFoundException , SQLException {				
 		String resultados = "";
